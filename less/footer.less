@@ -1,0 +1,78 @@
+@import "./main.less"; // Importar las variables globales
+
+.footer {
+  background-color: @color-background;  // Fondo azul oscuro marítimo
+  color: @color-text;  // Texto blanco
+  padding: 2rem 1rem;
+  font-family: @font-family;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    flex: 1;
+    min-width: 200px;
+
+    &-img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    &-description {
+      font-size: 0.9rem;
+      color: @color-accent;  // Verde suave marítimo
+    }
+  }
+
+  &__links,
+  &__contact {
+    flex: 1;
+    min-width: 200px;
+
+    &-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: @color-accent;  // Azul claro
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+
+      &-link {
+        text-decoration: none;
+        color: @color-text; // Blanco
+        font-size: 0.95rem;
+        display: block;
+        margin: 0.5rem 0;
+        transition: color 0.3s;
+
+        &:hover {
+          color: @color-hover;  // Verde agua claro
+        }
+      }
+    }
+  }
+
+  &__contact {
+    &-text {
+      font-size: 0.9rem;
+      margin: 0.4rem 0;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid @color-border;  // Blanco con opacidad
+    padding-top: 1rem;
+    color: @color-hover;  // Gris claro o acento
+  }
+}
