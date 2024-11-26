@@ -1,0 +1,96 @@
+@import "./main.less"; // Importa las variables globales
+
+// Animación para las tarjetas
+@keyframes card-pop {
+  0% {
+    transform: scale(0.9); // Más pequeño al inicio
+    opacity: 0; // Comienza transparente
+  }
+  50% {
+    transform: scale(1.05); // Un poco más grande en el medio
+    opacity: 1; // Aparece
+  }
+  100% {
+    transform: scale(1); // Vuelve al tamaño original
+  }
+}
+
+.cards {
+  padding: 2rem;
+  background-color: @color-accent; // Fondo azul claro marítimo
+  color: @color-text;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background-color: @color-background; // Fondo blanco para las tarjetas
+    border: 1px solid @color-border; // Bordes sutiles
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+
+    // Aplica la animación al agregar la tarjeta
+    animation: card-pop 0.5s ease-out;
+
+    &__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    &__content {
+      padding: 1rem;
+
+      &__title {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        color: @color-text2; // Texto negro para contraste sobre fondo blanco
+      }
+
+      &__description {
+        font-size: 1rem;
+        color: @color-text2; // Texto negro para mejor visibilidad
+        margin-bottom: 0.5rem;
+      }
+
+      &__price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: @color-hover; // Verde agua claro
+        margin-bottom: 1rem;
+      }
+
+      &__button {
+        display: inline-block;
+        padding: 0.8rem 1.2rem;
+        background-color: @color-hover; // Fondo verde agua claro
+        color: @color-text; // Texto blanco para el botón
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten(@color-hover, 10%);
+        }
+
+        &:focus {
+          outline: 2px solid lighten(@color-hover, 20%);
+        }
+      }
+    }
+  }
+}

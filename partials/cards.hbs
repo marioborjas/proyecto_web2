@@ -1,0 +1,15 @@
+<section class="cards">
+  <div class="cards__container">
+    {{#each products}}
+      <div class="card">
+        <img src="{{image}}" alt="{{name}}" class="card__image">
+        <div class="card__content">
+          <h3 class="card__title">{{name}}</h3>
+          <p class="card__description">{{description}}</p>
+          <p class="card__price">{{price}}</p>
+          <a href="/products.html" class="card__button">Ver más</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
