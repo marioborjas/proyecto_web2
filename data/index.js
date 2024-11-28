@@ -1,3 +1,5 @@
+// index.js
+import { productos } from './producto'; // Asegúrate de que esta ruta sea correcta
 import { getCardsData } from './cards';
 
 export const generarContextoDePagina = (page) => {
@@ -15,7 +17,13 @@ export const generarContextoDePagina = (page) => {
     case '/index.html':
       // Agrega los datos de las tarjetas a la página principal
       pageObject = {
-        products: getCardsData(), // Asegúrate de que `getCardsData` devuelve los productos
+        products: getCardsData(), // Si ya tienes esta función, la puedes dejar tal como está
+      };
+      break;
+
+    case '/productos.html':  // Agrega la lógica para productos
+      pageObject = {
+        productos: productos, // Asumiendo que los productos están definidos en producto.js
       };
       break;
 
@@ -30,5 +38,3 @@ export const generarContextoDePagina = (page) => {
     ...pageObject,
   };
 };
-
-  
