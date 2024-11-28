@@ -9,7 +9,7 @@ export const getCardsData = () => [
       name: "Camarón Clásico",
       description: "Camarones ideales para cualquier platillo.",
       price: "$15.00 / kg",
-      image:  "/imagenes/personal.jpg",
+      image:  "/imagenes/logo.jpg",
     },
     {
       name: "Camarón Económico",

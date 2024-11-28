@@ -1,78 +1,93 @@
-@import "./main.less"; // Importar las variables globales
+@import "./main.less"; // Importa las variables globales
 
+// Estilos generales del footer
 .footer {
   background-color: @color-background;  // Fondo azul oscuro marítimo
   color: @color-text;  // Texto blanco
   padding: 2rem 1rem;
   font-family: @font-family;
+}
 
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Estilos del logo
+.footer__logo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer__logo-img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer__description {
+  font-size: 0.9rem;
+  color: @color-accent;  // Verde suave marítimo
+}
+
+// Estilos de los enlaces
+.footer__links {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 20px;  // Mueve los enlaces a la derecha agregando margen a la izquierda
+
+  .footer__title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: @color-accent;  // Azul claro
   }
 
-  &__logo {
-    flex: 1;
-    min-width: 200px;
-
-    &-img {
-      max-width: 150px;
-      margin-bottom: 1rem;
-    }
-
-    &-description {
-      font-size: 0.9rem;
-      color: @color-accent;  // Verde suave marítimo
-    }
+  .footer__list {
+    list-style: none;
+    padding: 0;
   }
 
-  &__links,
-  &__contact {
-    flex: 1;
-    min-width: 200px;
+  .footer__link {
+    text-decoration: none;  // Elimina el subrayado
+    color: @color-text;  // Blanco
+    font-size: 0.95rem;
+    display: block;
+    margin: 0.5rem 0;
+    transition: color 0.3s;
 
-    &-title {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: @color-accent;  // Azul claro
-    }
-
-    &-list {
-      list-style: none;
-      padding: 0;
-
-      &-link {
-        text-decoration: none;
-        color: @color-text; // Blanco
-        font-size: 0.95rem;
-        display: block;
-        margin: 0.5rem 0;
-        transition: color 0.3s;
-
-        &:hover {
-          color: @color-hover;  // Verde agua claro
-        }
-      }
+    &:hover {
+      color: @color-hover;  // Verde agua claro
+      text-decoration: none;  // Asegura que no haya subrayado al hacer hover
     }
   }
+}
 
-  &__contact {
-    &-text {
-      font-size: 0.9rem;
-      margin: 0.4rem 0;
-    }
-  }
+// Estilos de contacto
+.footer__contact {
+  flex: 1;
+  min-width: 200px;
+}
 
-  &__bottom {
-    text-align: center;
-    font-size: 0.8rem;
-    margin-top: 1.5rem;
-    border-top: 1px solid @color-border;  // Blanco con opacidad
-    padding-top: 1rem;
-    color: @color-hover;  // Gris claro o acento
-  }
+.footer__contact-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: @color-accent;  // Azul claro
+}
+
+.footer__contact-text {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+// Pie de página (bottom)
+.footer__bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid @color-border;  // Blanco con opacidad
+  padding-top: 1rem;
+  color: @color-hover;  // Gris claro o acento
 }
