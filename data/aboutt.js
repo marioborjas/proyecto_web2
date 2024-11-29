@@ -18,9 +18,9 @@ export const getAboutData = () => {
       innovationText: "En Macsa Group, creemos en la innovación constante. Incorporamos tecnología avanzada para garantizar la calidad de nuestros productos y reducir el impacto ambiental de nuestras operaciones.",
       teamTitle: "Conoce a Nuestro Equipo",
       teamMembers: [
-        { name: "Juan Pérez", position: "CEO", imageSrc: "/imagenes/personal.jpg" },
-        { name: "Ana Martínez", position: "Directora de Operaciones", imageSrc: "/imagenes/personal.jpg" },
-        { name: "Carlos López", position: "Coordinador de Logística", imageSrc: "/imagenes/personal.jpg" },
+        { name: "Juan Pérez", position: "CEO", imageSrc: "/imagenes/CEO.JPG" },
+        { name: "Ana Martínez", position: "Directora de Operaciones", imageSrc: "/imagenes/directora.jpeg" },
+        { name: "Carlos López", position: "Coordinador de Logística", imageSrc: "/imagenes/COORDINADOR.webp" },
       ],
     };
   };
