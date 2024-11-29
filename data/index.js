@@ -2,7 +2,10 @@
 import { productos } from './producto'; // Asegúrate de que esta ruta sea correcta
 import { getCardsData } from './cards';
 import { getHeroData } from './hero';
+import { getContactData } from './contactt'; // Importar los datos de contacto
+import { getAboutData } from './aboutt'; // Importar los datos de "Acerca de"
 
+// Genera el contexto de la página según la ruta
 export const generarContextoDePagina = (page) => {
   console.log('Página actual:', page);
 
@@ -16,16 +19,28 @@ export const generarContextoDePagina = (page) => {
   let pageObject = {};
   switch (page) {
     case '/index.html':
-      // Agrega los datos de las tarjetas a la página principal
+      // Agrega los datos del Hero y las tarjetas para la página principal
       pageObject = {
         ...getHeroData(),
-        products: getCardsData(), // Si ya tienes esta función, la puedes dejar tal como está
+        products: getCardsData(), // Los productos que ya tienes
       };
       break;
 
     case '/productos.html':  // Agrega la lógica para productos
       pageObject = {
         productos: productos, // Asumiendo que los productos están definidos en producto.js
+      };
+      break;
+
+    case '/contact.html':  // Agrega los datos de contacto
+      pageObject = {
+        ...getContactData(), // Los datos del formulario de contacto
+      };
+      break;
+
+    case '/acercadenosotros.html':  // Agrega los datos de la sección "Acerca de"
+      pageObject = {
+        ...getAboutData(), // Los datos de "Acerca de Nosotros"
       };
       break;
 
