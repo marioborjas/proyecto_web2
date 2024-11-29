@@ -1,21 +1,21 @@
 export const getCardsData = () => [
     {
-      name: "Camarón Premium",
-      description: "Camarones de alta calidad, frescos del mar.",
-      price: "$20.00 / kg",
-      image: "/imagenes/personal.jpg",
+      name: "Camarón entero (sin pelar)",
+      description: "Este es el camarón que se vende en su forma natural, sin quitarle la cáscara ni la cabeza.",
+      price: "Lps.220.00 / Lb",
+      image: "/imagenes/productos/camaron_entero.jpg",
     },
     {
-      name: "Camarón Clásico",
-      description: "Camarones ideales para cualquier platillo.",
-      price: "$15.00 / kg",
-      image:  "/imagenes/logo.jpg",
+      name: "Camarón pelado (sin cáscara)",
+      description: "Es camarón que ha sido despojado de su cáscara, dejando solo la carne. Perfecto para cocina rapida",
+      price: "Lps.220.00 / Lb",
+      image:  "/imagenes/productos/camaron_pelado.jpg",
     },
     {
-      name: "Camarón Económico",
-      description: "La mejor opción al mejor precio.",
-      price: "$10.00 / kg",
-      image:  "/imagenes/personal.jpg",
+      name: "Camarón con cola",
+      description: "Camarón al que se le ha retirado la cáscara, pero se deja la cola intacta, generalmente para darle un toque estético.",
+      price: "Lps.240.00 / Lb",
+      image:  "/imagenes/productos/camaron_con_cola.jpg",
     },
   ];
   
