@@ -4,6 +4,7 @@ import { getCardsData } from './cards';
 import { getHeroData } from './hero';
 import { getContactData } from './contactt'; // Importar los datos de contacto
 import { getAboutData } from './aboutt'; // Importar los datos de "Acerca de"
+import { events } from './eventos';
 
 // Genera el contexto de la página según la ruta
 export const generarContextoDePagina = (page) => {
@@ -15,7 +16,7 @@ export const generarContextoDePagina = (page) => {
     description: "Descripción genérica para cualquier página.",
   };
 
-  // Objeto de datos específicos por página
+  // Objeto de datos específicos por páginas
   let pageObject = {};
   switch (page) {
     case '/index.html':
@@ -44,6 +45,11 @@ export const generarContextoDePagina = (page) => {
       };
       break;
 
+      case '/eventos.html':  // Agrega los datos de la sección "eventos"
+      pageObject = {
+        events, // Los eventos importados
+      };
+      break;
     default:
       // Contexto vacío o por defecto para otras páginas
       pageObject = {};
