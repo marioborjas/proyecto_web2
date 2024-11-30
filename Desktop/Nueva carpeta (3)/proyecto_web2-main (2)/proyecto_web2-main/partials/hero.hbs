@@ -1,0 +1,14 @@
+<!-- index.hbs -->
+<section class="hero">
+  <div class="hero-slider">
+    {{#each images}}
+      <div class="hero-slide" style="background-image: url('{{src}}');"></div>
+    {{/each}}
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">{{title}}</h1>
+    <h2 class="hero-subtitle">{{subtitle}}</h2>
+    <p class="hero-description">{{description}}</p>
+    <a href="{{buttonLink}}" class="hero-button">{{buttonText}}</a>
+  </div>
+</section>
