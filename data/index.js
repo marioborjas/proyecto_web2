@@ -5,6 +5,7 @@ import { getHeroData } from './hero';
 import { getContactData } from './contactt'; // Importar los datos de contacto
 import { getAboutData } from './aboutt'; // Importar los datos de "Acerca de"
 import { events } from './eventos';
+import { getFaqData } from './faq.js';
 
 // Genera el contexto de la página según la ruta
 export const generarContextoDePagina = (page) => {
@@ -48,6 +49,12 @@ export const generarContextoDePagina = (page) => {
       case '/eventos.html':  // Agrega los datos de la sección "eventos"
       pageObject = {
         events, // Los eventos importados
+      };
+      break;
+
+      case '/faq.html':  // Agrega los datos de la sección "eventos"
+      pageObject = {
+        ...getFaqData(), // Los eventos importados
       };
       break;
     default:

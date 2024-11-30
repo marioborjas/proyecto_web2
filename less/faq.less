@@ -1,0 +1,48 @@
+@import "./main.less";
+
+// faq.less
+.faq-container {
+    padding: @padding-horizontal;
+    font-family: @font-family;
+    background-color: @color-text;
+    color: @color-text;
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: darken(@color, 10%);
+      font-weight: 700;
+    }
+  
+    .faq-list {
+      list-style: none;
+      padding: 0;
+  
+      .faq-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid @color-border;
+        border-radius: 5px;
+        background-color: lighten(@color-background, 5%);
+        transition: all 0.3s ease;
+  
+        &:hover {
+          background-color: @color-hover;
+          border-color: @color-accent;
+        }
+  
+        .faq-question {
+          font-size: 1.2em;
+          font-weight: bold;
+          margin: 0 0 5px;
+          color: @color-accent;
+        }
+  
+        .faq-answer {
+          margin: 0;
+          color: @color-text;
+        }
+      }
+    }
+  }
+  
