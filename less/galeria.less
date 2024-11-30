@@ -1,0 +1,60 @@
+@import "./main.less"; // Importar las variables globales
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem @padding-horizontal;
+  background-color: lighten(@color-background, 5%);
+}
+
+.card {
+  background-color: @color-accent;
+  border: 1px solid @color-border;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.333% - 2rem);
+  min-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    background-color: @color-hover;
+  }
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: @secondary-color;
+}
+
+.card p {
+  font-size: 1rem;
+  color: @color-text2;
+  padding: 0 1rem 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+

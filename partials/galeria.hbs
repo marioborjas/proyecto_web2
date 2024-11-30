@@ -1,0 +1,9 @@
+<section class="gallery-container">
+    {{#each gallery}}
+    <div class="card">
+        <img src="{{this.img}}" alt="{{this.alt}}">
+        <h2>{{this.title}}</h2>
+        <p>{{this.description}}</p>
+    </div>
+    {{/each}}
+</section>
