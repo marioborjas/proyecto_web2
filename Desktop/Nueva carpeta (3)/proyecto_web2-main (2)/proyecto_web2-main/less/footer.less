@@ -1,0 +1,113 @@
+@import "./main.less"; // Importa las variables globales
+
+// Estilos generales para el footer
+.footer {
+  background-color: @color-background;  // Fondo azul oscuro marítimo
+  color: @color-text;  // Texto blanco
+  padding: 2rem 1rem;
+  font-family: @font-family;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Estilos para los íconos de redes sociales
+.footer__social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  .social-icon {
+    display: inline-block;
+    width: 40px;  // Tamaño del ícono
+    height: 40px; // Tamaño del ícono
+    transition: transform 0.3s ease;  // Transición para la animación de hover
+
+    &:hover {
+      transform: scale(1.2);  // Agrandar los íconos al pasar el mouse
+    }
+  }
+
+  .social-icon-img {
+    width: 100%;  // Hacer que las imágenes se ajusten al contenedor
+    height: 100%; // Asegurar que la imagen tenga la misma altura que el contenedor
+    object-fit: cover; // Asegura que la imagen cubra el área del contenedor
+  }
+}
+
+// Otros estilos para el footer (sin cambios)
+.footer__logo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer__logo-img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer__description {
+  font-size: 0.9rem;
+  color: @color-accent;
+}
+
+.footer__links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer__title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: @color-accent;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: @color-text;
+  font-size: 0.95rem;
+  display: block;
+  margin: 0.5rem 0;
+  transition: color 0.3s;
+
+  &:hover {
+    color: @color-hover;
+    text-decoration: none;
+  }
+}
+
+.footer__contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer__contact-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: @color-accent;
+}
+
+.footer__contact-text {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+.footer__bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid @color-border;
+  padding-top: 1rem;
+  color: @color-hover;
+}
