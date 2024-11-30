@@ -5,7 +5,6 @@
             <div class="productos__tarjetas">
                 {{#each productos}}
                 <div class="producto__tarjeta">
-                    <!-- Imagen sobre la tarjeta -->
                     <div class="producto__imagen-container">
                         <img src="{{this.imagen}}" alt="{{this.nombre}}" class="producto__imagen">
                     </div>
@@ -13,13 +12,10 @@
                         <h2 class="producto__nombre">{{this.nombre}}</h2>
                         <p class="producto__descripcion">{{this.descripcion}}</p>
                         <p class="producto__precio">{{this.precio}}</p>
-                        <!-- Botón de compra -->
                         <button class="producto__boton">Comprar</button>
 
-                        <!-- Controles de cantidad -->
                         <div class="producto__cantidad">
                             <span class="producto__flecha producto__flecha--izquierda"></span>
-                            <!-- El espacio se eliminó aquí -->
                             <span class="producto__numero">1</span>
                             <span class="producto__flecha producto__flecha--derecha"></span>
                         </div>

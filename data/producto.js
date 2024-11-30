@@ -40,7 +40,7 @@ export const productos = [
       detalles: "1 libra"
     },
     {
-      nombre: "Cmarón Jumbo",
+      nombre: "Camarón Jumbo",
       descripcion: "Este es un camarón más grande, ideal para platillos especiales.",
       precio: 280,
       imagen: "/imagenes/Camaron-pelado-cocido.png",
@@ -48,7 +48,7 @@ export const productos = [
       detalles: "1 libra"
     },
     {
-      nombre: "Cmarón Extra Grande",
+      nombre: "Camarón Extra Grande",
       descripcion: "26/30 piezas por libra. Más pequeño que el jumbo, pero sifue siendo de buen tamaño.",
       precio: 240,
       imagen: "/imagenes/Camaron-pelado-cocido.png",
@@ -56,7 +56,7 @@ export const productos = [
       detalles: "1 libra"
     },
     {
-      nombre: "Cmarón Grande",
+      nombre: "Camarón Grande",
       descripcion: "31/40 piezas por libra. Es el tamaño estándar que se utiliza en muchos platillos.",
       precio: 220,
       imagen: "/imagenes/Camaron-pelado-cocido.png",
@@ -64,7 +64,7 @@ export const productos = [
       detalles: "1 libra"
     },
     {
-      nombre: "Cmarón Mediano",
+      nombre: "Camarón Mediano",
       descripcion: "41/50 piezas por libra. Este es más pequeño y económico.",
       precio: 180,
       imagen: "/imagenes/Camaron-pelado-cocido.png",
@@ -72,7 +72,7 @@ export const productos = [
       detalles: "1 libra"
     },
     {
-      nombre: "Cmarón Pequeño",
+      nombre: "Camarón Pequeño",
       descripcion: "51/70 piezas por libra. Se utiliza en sopas, caldos o como relleno.",
       precio: 150,
       imagen: "/imagenes/Camaron-pelado-cocido.png",
