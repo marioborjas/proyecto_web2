@@ -1,12 +1,14 @@
-<!-- faq.hbs -->
 <div class="faq-container">
-  <h1>Preguntas Frecuentes</h1>
-  <ul class="faq-list">
+  <h1>{{title}}</h1>
+  <div class="faq-grid">
     {{#each faqs}}
-    <li class="faq-item">
-      <h2 class="faq-question">{{this.question}}</h2>
-      <p class="faq-answer">{{this.answer}}</p>
-    </li>
+    <div class="faq-card">
+      <div class="faq-header">
+        <span>{{this.question}}</span>
+        <span class="toggle-icon">+</span> <!-- Ícono de expansión -->
+      </div>
+      <div class="faq-answer">{{this.answer}}</div>
+    </div>
     {{/each}}
-  </ul>
+  </div>
 </div>
