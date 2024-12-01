@@ -1,0 +1,16 @@
+<div class="title-cards">
+  <h2>{{title}}</h2>
+</div>
+<div class="container-card">
+  {{#each cards}}
+  <div class="card">
+    <figure>
+      <img src="{{image}}" class="entero" />
+    </figure>
+    <div class="contenido-card">
+      <h3>{{heading}}</h3>
+      <p>{{description}}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>
