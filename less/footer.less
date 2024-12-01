@@ -111,3 +111,69 @@
   padding-top: 1rem;
   color: @color-hover;
 }
+
+
+// Diseño responsive para tablets
+@media (max-width: @breakResolutions[tablet]) {
+  .footer__container {
+    flex-direction: column; // Cambiar a diseño vertical
+    text-align: center;
+    gap: 0.8rem; // Reducir aún más el espacio entre las secciones
+  }
+
+  .footer__social {
+    justify-content: center;
+    margin-bottom: 0.8rem; // Compactar espacio extra debajo de las redes sociales
+  }
+
+  .footer__logo,
+  .footer__links,
+  .footer__contact {
+    flex: 1 1 auto;
+    min-width: 100%;
+    margin-bottom: 0.8rem; // Reducir el margen inferior entre las secciones
+  }
+
+  .footer__list {
+    padding: 0;
+    margin: 0.3rem 0; // Reducir margen superior e inferior de la lista
+  }
+}
+
+// Diseño responsive para móviles
+@media (max-width: @breakResolutions[mobile]) {
+  .footer {
+    padding: 0.8rem; // Compactar el padding general del footer
+  }
+
+  .footer__container {
+    gap: 0.5rem; // Reducir aún más el espacio entre las secciones
+  }
+
+  .footer__logo-img {
+    max-width: 120px; // Reducir el tamaño del logo para móviles
+    margin-bottom: 0.1rem; // Menos espacio debajo del logo
+  }
+
+  .footer__social .social-icon {
+    width: 40px; // Reducir tamaño de los íconos
+    height: 40px;
+  }
+
+  .footer__links-title,
+  .footer__contact-title {
+    font-size: 0.85rem; // Reducir los títulos para móviles
+    margin-bottom: 0.4rem; // Compactar espacio debajo del título
+  }
+
+  .footer__list,
+  .footer__contact-text {
+    font-size: 0.75rem; // Reducir texto para móviles
+    margin: 0.2rem 0; // Compactar espacio entre elementos
+  }
+
+  .footer__bottom {
+    font-size: 0.65rem; // Reducir el texto de la parte inferior
+    margin-top: 0.8rem; // Reducir espacio superior
+  }
+}

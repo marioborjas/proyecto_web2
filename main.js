@@ -1,5 +1,6 @@
 
 import './less/hero.less';
+import './less/header.less';
 
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll('.hero-slide');
@@ -38,4 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.querySelector(".nav__menu");
+
+  if (toggle && menu) {
+    console.log("Botón y menú encontrados");
+
+    toggle.addEventListener("click", () => {
+      console.log("Botón clickeado");
+      menu.classList.toggle("is-active");
+      console.log("Clase is-active aplicada:", menu.classList.contains("is-active"));
+    });
+  } else {
+    console.error("Error: Botón o menú no encontrados");
+  }
 });

@@ -100,3 +100,60 @@
     outline: 2px solid lighten(@color-hover, 20%);
   }
 }
+
+// Media queries para diseño responsive
+@media (max-width: @breakResolutions[tablet]) {
+  .cards__container {
+    gap: 1rem; // Reducir el espacio entre tarjetas
+  }
+
+  .card {
+    max-width: 45%; // Mostrar 2 tarjetas por fila en tablets
+    flex: 1 1 45%;
+  }
+
+  .card__image {
+    height: 180px; // Ajustar la altura de la imagen en tablets
+  }
+
+  .card__title {
+    font-size: 1.3rem; // Reducir tamaño del título
+  }
+
+  .card__description {
+    font-size: 0.9rem; // Reducir tamaño del texto
+  }
+}
+
+@media (max-width: @breakResolutions[mobile]) {
+  .cards__container {
+    flex-direction: column; // Cambiar a diseño vertical
+    gap: 0.8rem; // Reducir el espacio entre tarjetas
+  }
+
+  .card {
+    max-width: 100%; // Mostrar 1 tarjeta por fila en móviles
+    flex: 1 1 100%;
+  }
+
+  .card__image {
+    height: 150px; // Reducir la altura de la imagen en móviles
+  }
+
+  .card__title {
+    font-size: 1.2rem; // Reducir tamaño del título en móviles
+  }
+
+  .card__description {
+    font-size: 0.8rem; // Reducir tamaño del texto en móviles
+  }
+
+  .card__price {
+    font-size: 1rem; // Reducir tamaño del precio
+  }
+
+  .card__button {
+    font-size: 0.9rem; // Reducir el tamaño del botón
+    padding: 0.6rem 1rem; // Ajustar el padding del botón
+  }
+}

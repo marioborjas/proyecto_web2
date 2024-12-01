@@ -1,11 +1,13 @@
 @import "./main.less"; // Importar las variables globales
 
 .nav {
-  background-color: @color-background; // Fondo azul oscuro
-  color: @color-text; // Texto blanco
+  background-color: @color-background;
+  color: @color-text;
   padding: 1rem 0;
+  position: relative;
+  z-index: 10;
 
-  &__container {
+  .nav__container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -14,36 +16,89 @@
     padding: 0 @padding-horizontal;
   }
 
-  &__logo {
+  .nav__logo {
     display: flex;
     align-items: center;
     text-decoration: none;
 
     &-img {
-      max-height: 60px; // Tamaño de la imagen
+      max-height: 60px;
     }
   }
 
-  &__menu {
-    display: flex;
+  .nav__menu {
+    display: flex; // Mostrar horizontalmente por defecto
     list-style: none;
     margin: 0;
     padding: 0;
 
+    &.is-active {
+      max-height: 300px; // Mostrar menú desplegable
+      opacity: 1;
+    }
+
     & > li {
       margin-left: 1.5rem;
     }
+
+    .nav__link {
+      text-decoration: none;
+      color: @color-text;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: @color-hover;
+      }
+    }
   }
 
-  &__link {
-    text-decoration: none;
-    color: @color-text; // Blanco
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  // Ocultar el botón por defecto
+  #nav-toggle {
+    display: none;
+    background-color: @color-accent;
+    color: @color-text;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 
     &:hover {
-      color: @color-hover; // Verde agua claro
+      background-color: @color-hover;
+    }
+  }
+
+  // Estilos del menú responsive
+  @media (max-width: @breakResolutions[tablet]) {
+    .nav__menu {
+      display: flex;
+      flex-direction: column; // Cambiar a columnas
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: @color-background;
+      width: 100%;
+      max-height: 0; // Ocultar por defecto
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+
+      &.is-active {
+        max-height: 300px; // Mostrar menú desplegable
+        
+      }
+
+      & > li {
+        margin: 1rem 0;
+        text-align: center;
+      }
+    }
+
+    #nav-toggle {
+      display: block; // Mostrar el botón en resoluciones menores
     }
   }
 }
