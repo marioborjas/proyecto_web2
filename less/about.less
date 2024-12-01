@@ -1,6 +1,5 @@
 @import "./main.less";
 
-
 @primary-color: #005f73;
 @secondary-color: #0a9396;
 @background-color: #f0f4f8;
@@ -8,7 +7,7 @@
 
 .about {
   background-color: @background-color;
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
 
   .about-header {
     text-align: center;
@@ -77,9 +76,11 @@
           width: 250px;
 
           img {
-            width: 100%;
+            width: 150px; /* Establecer ancho fijo */
+            height: 150px; /* Establecer altura fija */
             border-radius: 50%;
             margin-bottom: 1rem;
+            object-fit: cover; /* Asegurar que la imagen se recorte proporcionalmente */
           }
 
           h3 {

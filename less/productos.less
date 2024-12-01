@@ -1,128 +1,108 @@
-.producto__tarjeta {
+@import "./main.less";
+
+.productos {
+  padding: 5px 20px; /* Agregar relleno superior e inferior */
+  background-color: @background-color;
+
+  .productos__fondo {
+    max-width: 2000px; /* Limitar el ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 0 20px; /* Agregar relleno lateral */
+  }
+
+  .productos__contenedor {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    position: relative;
-    width: 300px;
-    background: linear-gradient(135deg, @color-background, @secondary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 20px;
-    transition: transform 0.3s ease;
-  }
-  .productos__tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .producto__tarjeta {
-    flex: 1 1 calc(25% - 20px);
-    box-sizing: border-box;
-    max-width: calc(25% - 20px);
-  }
-  
-  .producto__tarjeta:hover {
-    transform: scale(1.05);
-  }
-  
-  .producto__imagen-container {
-    width: 100%;
-    height: 200px; 
-    overflow: hidden;
-    border-radius: 0; 
-}
-
-.producto__imagen {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: none;
-    box-shadow: none;
-}
-  
-.producto__detalles {
-  padding: 15px 0;
-  text-align: center;
-
-  & > .producto__nombre {
-      font-size: 30px;
-      margin-bottom: 10px;
-      color: #fff;
-      white-space: normal; 
-  }
-
-  & > .producto__descripcion {
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-      color: #fff;
-      line-height: 1.4;
-      overflow: hidden; 
-  }
-}
-
-.producto__precio {
-  font-size: 1.5rem; 
-  font-weight: bold;
-  margin: 15px 0;
-  color: #ffee00;
-  display: block; 
-  text-align: center;
-
-  &:before {
-      content: "Precio: ";
-      font-size: 1.2rem;
-      font-weight: normal;
-      color: #fff;
-  }
-}
-
-  
-  .producto__boton {
-    background-color: @color-accent;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .producto__boton:hover {
-    background-color: @color-hover;
-  }
-  
-  .producto__cantidad {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    text-align: center;
+
+    .productos__titulo {
+      font-size: 3rem; /* Letra más grande */
+      color: @primary-color;
+      margin-bottom: 30px; /* Espacio inferior */
+      text-align: center; /* Asegurar que esté centrado */
+    }
+
+    .productos__tarjetas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px; /* Espacio adicional dentro de las tarjetas */
+    }
+
+    .producto__tarjeta {
+      flex: 1 1 calc(25% - 20px);
+      box-sizing: border-box;
+      max-width: calc(25% - 20px);
+      background: linear-gradient(135deg, @color-background, @secondary-color);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .producto__imagen-container {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 0;
+      }
+
+      .producto__imagen {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .producto__detalles {
+        padding: 15px 0;
+
+        .producto__nombre {
+          font-size: 1.8rem;
+          margin-bottom: 10px;
+          color: #fff;
+        }
+
+        .producto__descripcion {
+          font-size: 1rem;
+          margin-bottom: 15px;
+          color: #fff;
+          line-height: 1.4;
+        }
+
+        .producto__precio {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 15px 0;
+          color: #ffee00;
+
+          &:before {
+            content: "Precio: ";
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #fff;
+          }
+        }
+
+        .producto__boton {
+          background-color: @color-accent;
+          color: #fff;
+          border: none;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: @color-hover;
+          }
+        }
+      }
+    }
   }
-  
-  .producto__flecha {
-    font-size: 1.5rem;
-    color: @color-text;
-    cursor: pointer;
-  }
-  
-  .producto__flecha--izquierda::before {
-    content: "<";
-  }
-  
-  .producto__flecha--derecha::before {
-    content: ">";
-  }
-  
-  
-  .producto__numero {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #f1c40f;
-  }
-  
+}

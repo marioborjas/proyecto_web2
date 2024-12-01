@@ -1,11 +1,13 @@
 @import "./main.less"; // Importar las variables globales
 
+
 .featured-post {
     background-color: @color-hover; // Usar el color de acento global
     border-radius: 8px;
-    padding: 20px;
+    padding: 20px; /* Aumentar el padding general para darle espacio */
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar texto e imagen */
 
     h2 {
         font-size: 2rem;
@@ -14,21 +16,25 @@
     }
 
     img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 20px;
+        
+        margin-bottom: 10px; /* Reducir el espacio entre la imagen y el texto */
+        display: block;
+        margin: 0 auto; /* Centrar la imagen */
     }
 
     p {
         font-size: 1.2rem;
         line-height: 1.6;
         color: @color-text; // Usar el color de texto global
+        margin-top: 10px; /* Agregar un pequeño espacio superior */
     }
 }
 
 .other-posts {
-
+    max-width: 1800px; /* Limitar el ancho máximo de la sección */
+    margin: 0 auto; /* Centrar la sección horizontalmente */
+    padding: 0 20px; /* Agregar relleno lateral */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
 
     h2 {
         font-size: 1.8rem;
@@ -42,6 +48,7 @@
         padding: 15px;
         margin-bottom: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 2px solid lighten(@color-background, 20%); /* Agregar un borde ligero */
 
         h3 {
             font-size: 1.5rem;
@@ -57,6 +64,7 @@
         &:hover {
             transform: scale(1.03);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-color: @secondary-color; /* Cambiar color del borde al hacer hover */
             transition: all 0.3s ease;
         }
 

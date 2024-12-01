@@ -2,7 +2,7 @@ export const getBlogData = () => {
     return {
         featuredPost: {
             title: "Empacadora de Camaron: Calidad y Compromiso",
-            image: "/imagenes/blogs/cir.jpg",
+            image: "/imagenes/logo.png",
             alt: "Empacadora del Mar",
             description: "La empacadora de mariscos 'Grupo MACSA' se ha destacado como una de las empresas líderes en la industria, ofreciendo productos de alta calidad y un fuerte compromiso con la sostenibilidad y el medio ambiente. Conoce cómo han logrado ser un referente en exportaciones internacionales.",
         },

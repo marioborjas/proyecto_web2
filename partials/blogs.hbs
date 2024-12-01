@@ -1,21 +1,23 @@
-<section class="featured-post">
-    <h2>{{featuredPost.title}}</h2>
-    <img src="{{featuredPost.image}}" alt="{{featuredPost.alt}}" style="width: 500px; display: block; margin: 0 auto;">
-    <p>{{featuredPost.description}}</p>
-</section>
-<section class="other-posts">
-    <h2>Otras Publicaciones</h2>
-    {{#each otherPosts}}
-    <div class="post">
-        <h3>{{this.title}}</h3>
-        <p>{{this.description}}</p>
-        {{#if this.certifications}}
-        <div class="certifications-container">
-            {{#each this.certifications}}
-            <img src="{{this.img}}" alt="{{this.alt}}" class="certification-image">
-            {{/each}}
+
+    <section class="featured-post">
+        <h2>{{featuredPost.title}}</h2>
+        <img src="{{featuredPost.image}}" alt="{{featuredPost.alt}}"
+            style="width: 500px; display: block; margin: 0 auto;">
+        <p>{{featuredPost.description}}</p>
+    </section>
+    <section class="other-posts">
+        <h2>Otras Publicaciones</h2>
+        {{#each otherPosts}}
+        <div class="post">
+            <h3>{{this.title}}</h3>
+            <p>{{this.description}}</p>
+            {{#if this.certifications}}
+            <div class="certifications-container">
+                {{#each this.certifications}}
+                <img src="{{this.img}}" alt="{{this.alt}}" class="certification-image">
+                {{/each}}
+            </div>
+            {{/if}}
         </div>
-        {{/if}}
-    </div>
-    {{/each}}
-</section>
+        {{/each}}
+    </section>

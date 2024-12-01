@@ -1,4 +1,4 @@
-@import "./main.less"; // Importar las variables globales
+@import "./main.less";
 
 .gallery-container {
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: center;
   gap: 2rem;
   padding: 2rem @padding-horizontal;
-  background-color: lighten(@color-background, 5%);
+  background-color: lighten(@color-text, 5%);
 
   .card {
     background-color: @color-accent;
@@ -26,8 +26,9 @@
     }
 
     img {
-      width: 100%;
-      height: auto;
+      width: 100%; /* Ancho completo de la tarjeta */
+      height: 200px; /* Altura fija para todas las imágenes */
+      object-fit: cover; /* Recorta proporcionalmente para llenar el área */
       display: block;
     }
 
