@@ -71,33 +71,34 @@
   }
 
   // Estilos del menú responsive
-  @media (max-width: @breakResolutions[tablet]) {
-    .nav__menu {
-      display: flex;
-      flex-direction: column; 
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: @color-background;
-      width: 100%;
-      max-height: 0; 
-      overflow: hidden;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
-      opacity: 0;
+  // Estilos del menú responsive
+@media (max-width: @breakResolutions[tablet]) {
+  .nav__menu {
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: @color-background;
+    width: 100%;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
 
-      &.is-active {
-        max-height: 300px; 
-        
-      }
-
-      & > li {
-        margin: 1rem 0;
-        text-align: center;
-      }
+    &.is-active {
+      max-height: none; // Ajusta la altura para mostrar todos los elementos
+      opacity: 1; // Asegurar que el menú sea visible
     }
 
-    #nav-toggle {
-      display: block; 
+    & > li {
+      margin: 1rem 0;
+      text-align: center;
     }
   }
+
+  #nav-toggle {
+    display: block; 
+  }
+}
 }
