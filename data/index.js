@@ -1,16 +1,16 @@
-// index.js
-import { productos } from './producto'; // Asegúrate de que esta ruta sea correcta
+
+import { productos } from './producto'; 
 import { getCardsData } from './cards';
 import { getHeroData } from './hero';
-import { getContactData } from './contactt'; // Importar los datos de contacto
-import { getAboutData } from './aboutt'; // Importar los datos de "Acerca de"
+import { getContactData } from './contactt'; 
+import { getAboutData } from './aboutt'; 
 import { events } from './eventos';
 import { getFaqData } from './faq.js';
 import { getGalleryData } from './galeria.js';
 import { getBlogData } from './blogs.js';
 import { getnuestroprogramaData } from './nuestroprograma.js';
 
-// Genera el contexto de la página según la ruta
+
 export const generarContextoDePagina = (page) => {
   console.log('Página actual:', page);
 
@@ -20,70 +20,70 @@ export const generarContextoDePagina = (page) => {
     description: "Descripción genérica para cualquier página.",
   };
 
-  // Objeto de datos específicos por páginas
+  
   let pageObject = {};
   switch (page) {
     case '/index.html':
-      // Agrega los datos del Hero y las tarjetas para la página principal
+      
       pageObject = {
         ...getHeroData(),
-        products: getCardsData(), // Los productos que ya tienes
+        products: getCardsData(), 
       };
       break;
 
-    case '/productos.html':  // Agrega la lógica para productos
+    case '/productos.html':  
       pageObject = {
-        productos: productos, // Asumiendo que los productos están definidos en producto.js
+        productos: productos, 
       };
       break;
 
-    case '/contact.html':  // Agrega los datos de contacto
+    case '/contact.html':  
       pageObject = {
-        ...getContactData(), // Los datos del formulario de contacto
+        ...getContactData(), 
       };
       break;
 
-    case '/acercadenosotros.html':  // Agrega los datos de la sección "Acerca de"
+    case '/acercadenosotros.html':  
       pageObject = {
-        ...getAboutData(), // Los datos de "Acerca de Nosotros"
+        ...getAboutData(), 
       };
       break;
 
-      case '/eventos.html':  // Agrega los datos de la sección "eventos"
+      case '/eventos.html':  
       pageObject = {
-        events, // Los eventos importados
+        events, 
       };
       break;
 
-      case '/faq.html':  // Agrega los datos de la sección "eventos"
+      case '/faq.html':  
       pageObject = {
-        ...getFaqData(), // Los eventos importados
+        ...getFaqData(), 
       };
       break;
 
-      case '/galeria.html':  // Agrega los datos de la sección "eventos"
+      case '/galeria.html':  
       pageObject = {
-        ...getGalleryData(), // Los eventos importados
+        ...getGalleryData(), 
       };
       break;
 
-      case '/nuestroprograma.html':  // Agrega los datos de la sección "eventos"
+      case '/nuestroprograma.html':  
       pageObject = {
-        ...getnuestroprogramaData(), // Los eventos importados
+        ...getnuestroprogramaData(), 
       };
       break;
       
-      case '/blogs.html':  // Agrega los datos de la sección "eventos"
+      case '/blogs.html':  
       pageObject = {
-        ...getBlogData(), // Los eventos importados
+        ...getBlogData(), 
       };
       break;
     default:
-      // Contexto vacío o por defecto para otras páginas
+      
       pageObject = {};
   }
 
-  // Combina los contextos global y específico
+  
   return {
     ...contextObject,
     ...pageObject,

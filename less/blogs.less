@@ -1,70 +1,70 @@
-@import "./main.less"; // Importar las variables globales
+@import "./main.less"; 
 
 
 .featured-post {
-    background-color: @color-hover; // Usar el color de acento global
+    background-color: @color-hover; 
     border-radius: 8px;
-    padding: 20px; /* Aumentar el padding general para darle espacio */
+    padding: 20px; 
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centrar texto e imagen */
+    text-align: center; 
 
     h2 {
         font-size: 2rem;
         margin-bottom: 15px;
-        color: @secondary-color; // Usar el color secundario global
+        color: @secondary-color; 
     }
 
     img {
         
-        margin-bottom: 10px; /* Reducir el espacio entre la imagen y el texto */
+        margin-bottom: 10px; 
         display: block;
-        margin: 0 auto; /* Centrar la imagen */
+        margin: 0 auto; 
     }
 
     p {
         font-size: 1.2rem;
         line-height: 1.6;
-        color: @color-text; // Usar el color de texto global
-        margin-top: 10px; /* Agregar un pequeño espacio superior */
+        color: @color-text; 
+        margin-top: 10px; 
     }
 }
 
 .other-posts {
-    max-width: 1800px; /* Limitar el ancho máximo de la sección */
-    margin: 0 auto; /* Centrar la sección horizontalmente */
-    padding: 0 20px; /* Agregar relleno lateral */
-    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    max-width: 1800px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
 
     h2 {
         font-size: 1.8rem;
         margin-bottom: 20px;
-        color: @secondary-color; // Usar el color secundario global
+        color: @secondary-color; 
     }
 
     .post {
-        background-color: @color-text; // Usar el color de fondo global
+        background-color: @color-text; 
         border-radius: 8px;
         padding: 15px;
         margin-bottom: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border: 2px solid lighten(@color-background, 20%); /* Agregar un borde ligero */
+        border: 2px solid lighten(@color-background, 20%); 
 
         h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color: @secondary-color; // Usar el color secundario global
+            color: @secondary-color; 
         }
 
         p {
             font-size: 1rem;
-            color: @secondary-color; // Usar el color de texto global
+            color: @secondary-color; 
         }
 
         &:hover {
             transform: scale(1.03);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-color: @secondary-color; /* Cambiar color del borde al hacer hover */
+            border-color: @secondary-color; 
             transition: all 0.3s ease;
         }
 
@@ -75,8 +75,8 @@
             margin-top: 15px;
 
             .certification-image {
-                width: 100px; /* Ajustar el ancho */
-                height: auto; /* Mantener proporción */
+                width: 100px; 
+                height: auto; 
                 border-radius: 5px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 transition: transform 0.2s ease;
@@ -85,6 +85,91 @@
                     transform: scale(1.03);
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                     transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries para diseño responsive
+@media (max-width: @breakResolutions[tablet]) {
+    .featured-post {
+        padding: 15px;
+        h2 {
+            font-size: 1.8rem;
+        }
+        img {
+            max-width: 100%; 
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .other-posts {
+        padding: 0 10px;
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .post {
+            padding: 10px;
+            margin-bottom: 15px;
+
+            h3 {
+                font-size: 1.3rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+
+            .certifications-container {
+                .certification-image {
+                    width: 80px; 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @breakResolutions[mobile]) {
+    .featured-post {
+        padding: 10px;
+        h2 {
+            font-size: 1.5rem;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .other-posts {
+        padding: 0 5px;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        .post {
+            padding: 8px;
+            margin-bottom: 10px;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+
+            .certifications-container {
+                .certification-image {
+                    width: 70px; 
                 }
             }
         }

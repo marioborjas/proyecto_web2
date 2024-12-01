@@ -14,17 +14,17 @@
 
   .faq-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); // Forzamos 2 columnas
-    gap: 20px; // Espacio entre tarjetas
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
     padding: 20px;
 
     @media (max-width: 768px) {
-      grid-template-columns: 1fr; // Una columna en pantallas pequeñas
+      grid-template-columns: 1fr; 
     }
   }
 
   .faq-card {
-    background-color: lighten(@color-background, 8%); // Fondo ligeramente más claro
+    background-color: lighten(@color-background, 8%); 
     border: 1px solid @color-border;
     border-radius: 8px;
     padding: 15px;
@@ -50,13 +50,13 @@
     .faq-answer {
       margin-top: 10px;
       color: @color-text;
-      max-height: 0; // Oculta la respuesta inicialmente
+      max-height: 0; 
       overflow: hidden;
       transition: max-height 0.3s ease, padding 0.3s ease;
     }
 
     &.expanded .faq-answer {
-      max-height: 200px; // Espacio visible cuando está expandida
+      max-height: 200px; 
       padding-top: 10px;
     }
 
@@ -67,7 +67,7 @@
     }
 
     &.expanded .toggle-icon {
-      transform: rotate(180deg); // Anima el ícono al expandir
+      transform: rotate(180deg); 
     }
   }
 }

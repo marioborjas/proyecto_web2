@@ -1,27 +1,27 @@
-@import "./main.less"; // Importa las variables globales
+@import "./main.less"; 
 
-// Estilos para la sección del mapa
+
 .map-container {
   padding: 2rem 1rem;
   text-align: center;
-  background-color: @color-text;  // Color de fondo para la sección
+  background-color: @color-text;  
 
   .map-title {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: @secondary-color;  // Color del título (puede ser blanco o cualquier color deseado)
+    color: @secondary-color;  
   }
 
   .map {
     max-width: 100%;
-    margin: 0 auto;  // Centrar el mapa
-    border-radius: 8px;  // Bordes redondeados en el mapa (opcional)
+    margin: 0 auto;  
+    border-radius: 8px; 
 
     iframe {
-      width: 80%;  // El iframe ocupa el 100% del ancho disponible
-      height: 500px;  // Altura más pequeña
-      border: 0;  // Elimina el borde alrededor del iframe
-      border-radius: 8px;  // Bordes redondeados (opcional)
+      width: 80%;  
+      height: 500px;  
+      border: 0;  
+      border-radius: 8px;  
     }
   }
 }

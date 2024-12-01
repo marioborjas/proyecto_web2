@@ -3,9 +3,9 @@
 export const getHeroData = () => {
     return {
       images: [
-        { src: "/imagenes/hero/planta_de_trabajo.jpg" }, // Primera imagen
-        { src: "/imagenes/hero/carga.jpg" }, // Segunda imagen 
-        { src: "/imagenes/hero/seleccion.jpg" }, // Cuarta imagen
+        { src: "/imagenes/hero/planta_de_trabajo.jpg" }, 
+        { src: "/imagenes/hero/carga.jpg" }, 
+        { src: "/imagenes/hero/seleccion.jpg" }, 
       ],
       title: "Bienvenidos a Macsa Group",
       subtitle: "La mejor calidad en mariscos",

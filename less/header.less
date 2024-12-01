@@ -1,4 +1,4 @@
-@import "./main.less"; // Importar las variables globales
+@import "./main.less"; 
 
 .nav {
   background-color: @color-background;
@@ -27,13 +27,13 @@
   }
 
   .nav__menu {
-    display: flex; // Mostrar horizontalmente por defecto
+    display: flex; 
     list-style: none;
     margin: 0;
     padding: 0;
 
     &.is-active {
-      max-height: 300px; // Mostrar menú desplegable
+      max-height: 300px; 
       opacity: 1;
     }
 
@@ -54,7 +54,6 @@
     }
   }
 
-  // Ocultar el botón por defecto
   #nav-toggle {
     display: none;
     background-color: @color-accent;
@@ -75,19 +74,19 @@
   @media (max-width: @breakResolutions[tablet]) {
     .nav__menu {
       display: flex;
-      flex-direction: column; // Cambiar a columnas
+      flex-direction: column; 
       position: absolute;
       top: 100%;
       right: 0;
       background-color: @color-background;
       width: 100%;
-      max-height: 0; // Ocultar por defecto
+      max-height: 0; 
       overflow: hidden;
       transition: max-height 0.3s ease, opacity 0.3s ease;
       opacity: 0;
 
       &.is-active {
-        max-height: 300px; // Mostrar menú desplegable
+        max-height: 300px; 
         
       }
 
@@ -98,7 +97,7 @@
     }
 
     #nav-toggle {
-      display: block; // Mostrar el botón en resoluciones menores
+      display: block; 
     }
   }
 }

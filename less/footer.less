@@ -1,9 +1,9 @@
-@import "./main.less"; // Importa las variables globales
+@import "./main.less"; 
 
-// Estilos generales para el footer
+
 .footer {
-  background-color: @color-background;  // Fondo azul oscuro marítimo
-  color: @color-text;  // Texto blanco
+  background-color: @color-background;  
+  color: @color-text;  
   padding: 2rem 1rem;
   font-family: @font-family;
 }
@@ -17,7 +17,6 @@
   margin: 0 auto;
 }
 
-// Estilos para los íconos de redes sociales
 .footer__social {
   display: flex;
   gap: 1rem;
@@ -25,23 +24,22 @@
 
   .social-icon {
     display: inline-block;
-    width: 40px;  // Tamaño del ícono
-    height: 40px; // Tamaño del ícono
-    transition: transform 0.3s ease;  // Transición para la animación de hover
+    width: 40px;  
+    height: 40px; 
+    transition: transform 0.3s ease;  
 
     &:hover {
-      transform: scale(1.2);  // Agrandar los íconos al pasar el mouse
+      transform: scale(1.2);  
     }
   }
 
   .social-icon-img {
-    width: 100%;  // Hacer que las imágenes se ajusten al contenedor
-    height: 100%; // Asegurar que la imagen tenga la misma altura que el contenedor
-    object-fit: cover; // Asegura que la imagen cubra el área del contenedor
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
   }
 }
 
-// Otros estilos para el footer (sin cambios)
 .footer__logo {
   flex: 1;
   min-width: 200px;
@@ -116,14 +114,14 @@
 // Diseño responsive para tablets
 @media (max-width: @breakResolutions[tablet]) {
   .footer__container {
-    flex-direction: column; // Cambiar a diseño vertical
+    flex-direction: column; 
     text-align: center;
-    gap: 0.8rem; // Reducir aún más el espacio entre las secciones
+    gap: 0.8rem; 
   }
 
   .footer__social {
     justify-content: center;
-    margin-bottom: 0.8rem; // Compactar espacio extra debajo de las redes sociales
+    margin-bottom: 0.8rem; 
   }
 
   .footer__logo,
@@ -131,49 +129,49 @@
   .footer__contact {
     flex: 1 1 auto;
     min-width: 100%;
-    margin-bottom: 0.8rem; // Reducir el margen inferior entre las secciones
+    margin-bottom: 0.8rem;
   }
 
   .footer__list {
     padding: 0;
-    margin: 0.3rem 0; // Reducir margen superior e inferior de la lista
+    margin: 0.3rem 0;
   }
 }
 
 // Diseño responsive para móviles
 @media (max-width: @breakResolutions[mobile]) {
   .footer {
-    padding: 0.8rem; // Compactar el padding general del footer
+    padding: 0.8rem; 
   }
 
   .footer__container {
-    gap: 0.5rem; // Reducir aún más el espacio entre las secciones
+    gap: 0.5rem; 
   }
 
   .footer__logo-img {
-    max-width: 120px; // Reducir el tamaño del logo para móviles
-    margin-bottom: 0.1rem; // Menos espacio debajo del logo
+    max-width: 120px; 
+    margin-bottom: 0.1rem; 
   }
 
   .footer__social .social-icon {
-    width: 40px; // Reducir tamaño de los íconos
+    width: 40px; 
     height: 40px;
   }
 
   .footer__links-title,
   .footer__contact-title {
-    font-size: 0.85rem; // Reducir los títulos para móviles
-    margin-bottom: 0.4rem; // Compactar espacio debajo del título
+    font-size: 0.85rem; 
+    margin-bottom: 0.4rem; 
   }
 
   .footer__list,
   .footer__contact-text {
-    font-size: 0.75rem; // Reducir texto para móviles
-    margin: 0.2rem 0; // Compactar espacio entre elementos
+    font-size: 0.75rem; 
+    margin: 0.2rem 0; 
   }
 
   .footer__bottom {
-    font-size: 0.65rem; // Reducir el texto de la parte inferior
-    margin-top: 0.8rem; // Reducir espacio superior
+    font-size: 0.65rem; 
+    margin-top: 0.8rem; 
   }
 }

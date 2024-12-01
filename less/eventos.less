@@ -1,21 +1,19 @@
-@import "./main.less"; // Importa las variables globales
+@import "./main.less"; 
 
 .events {
- 
-  background-color: @color-accent;  // Fondo azul claro marítimo
+  background-color: @color-accent; 
   color: @color-text;
 
-  // Imagen estática arriba de la sección de eventos
   .events__image {
     width: 100%;
-    height: 300px;  // Ajusta la altura de la imagen
-    margin-bottom: 2rem;  // Espacio debajo de la imagen
+    height: 300px; 
+    margin-bottom: 2rem;
     overflow: hidden;
 
     .events__image-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;  // Asegura que la imagen cubra todo el contenedor
+      object-fit: cover;
     }
   }
 
@@ -36,7 +34,7 @@
   }
 
   .event {
-    background-color: @color-background;  // Fondo blanco
+    background-color: @color-background;
     border: 1px solid @color-border;
     border-radius: 8px;
     padding: 1.5rem;
@@ -45,21 +43,21 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: scale(1.05);  // Efecto de zoom al pasar el mouse
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);  // Sombra más fuerte
+      transform: scale(1.05);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .event__image {
       width: 100%;
-      height: 200px;  // Ajusta la altura de las imágenes de los eventos
+      height: 200px; 
       overflow: hidden;
-      margin-bottom: 1rem;  // Espacio debajo de la imagen
+      margin-bottom: 1rem;
       border-radius: 8px;
 
       .event__image-img {
         width: 100%;
         height: 100%;
-        object-fit: cover;  // Asegura que la imagen se ajuste correctamente al contenedor
+        object-fit: cover;
       }
     }
 
@@ -78,5 +76,68 @@
       font-size: 1rem;
       color: @color-text;
     }
+  }
+}
+
+// Responsive 
+@media (max-width: @breakResolutions[tablet]) {
+  .events__image {
+    height: 200px !important; 
+  }
+
+  .events__title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .events__container {
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .event {
+    width: calc(50% - 1rem);
+  }
+
+  .event__image {
+    height: 150px !important; 
+  }
+}
+
+@media (max-width: @breakResolutions[mobile]) {
+  .events__image {
+    height: 120px !important; 
+  }
+
+  .events__title {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .events__container {
+    gap: 0.8rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .event {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .event__image {
+    height: 120px !important; 
+  }
+
+  .event__image-img {
+    height: 100% !important; 
+    object-fit: cover;
+  }
+
+  .event__title {
+    font-size: 1.1rem;
+  }
+
+  .event__description {
+    font-size: 0.85rem;
   }
 }

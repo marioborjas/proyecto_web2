@@ -1,4 +1,4 @@
-// data/contactt.js
+
 export const getContactData = () => {
     return {
       title: "Contáctanos",

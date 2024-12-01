@@ -1,4 +1,4 @@
-// data/aboutt.js
+
 export const getAboutData = () => {
     return {
       title: "Conoce Más Sobre Nosotros",
