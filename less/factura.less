@@ -1,0 +1,156 @@
+@import "./main.less";
+
+#espacio-hero-footer {
+  background-color: @color-hover;
+  padding: 2%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .factura-container {
+    font-family: @font-family;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: @padding-horizontal;
+    background-color: @color-background;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid @color-border;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(to right, @color, @secondary-color);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .factura-header {
+      text-align: center;
+      margin-bottom: 20px;
+
+      h1 {
+        font-size: 2.4rem;
+        color: @color;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid @color;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    .factura-details {
+      margin-bottom: 2rem;
+      border-bottom: 1px dashed @color-border;
+      padding-bottom: 1.5rem;
+
+      h2 {
+        font-size: 2rem;
+        color: @secondary-color;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .productos, .totales {
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        background-color: @color-accent;
+
+        .producto {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 0;
+          border-bottom: 1px solid @color-border;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          p {
+            font-size: 1.2rem;
+            color: @color-text2;
+            margin-right: 1rem;
+          }
+
+          .eliminar-btn {
+            margin-left: 1rem;
+            cursor: pointer;
+            background-color: @color-hover;
+            color: @color-text;
+            padding: 0.8rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .totales {
+        text-align: right;
+
+        .subtotal, .impuesto, .total {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin: 0.5rem 0;
+          color: @color-text2;
+
+          p {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-weight: normal;
+          }
+        }
+
+        .total {
+          border-top: 2px solid @color;
+          padding-top: 0.5rem;
+          color: @secondary-color;
+        }
+      }
+    }
+
+    .pago {
+      text-align: center;
+      margin-top: 1rem;
+
+      #pagarBtn {
+        background-color: @color;
+        color: @color-text;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: darken(@color, 10%);
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    #mensajePago {
+      display: none;
+      padding: 1rem;
+      background-color: @secondary-color;
+      color: @color-text;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+    }
+  }
+}
