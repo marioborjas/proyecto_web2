@@ -60,3 +60,4 @@ export const productos = [
         imagen: "/imagenes/productos/camaron_pequeno.png"
     }
   ];
+  
