@@ -20,7 +20,7 @@ const getHtmlEntries = ()=>{
 export default defineConfig(
     {
         appType: 'mpa',
-        base: "./",
+        base: "/proyecto_web2",
         build: {
             rollupOptions: {
                 input: getHtmlEntries()
