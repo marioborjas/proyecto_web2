@@ -11,7 +11,7 @@ export const getHeroData = () => {
       subtitle: "La mejor calidad en mariscos",
       description: "Disfruta de productos frescos y sabrosos, perfectos para cualquier ocasión. Descubre nuestra variedad de productos y haz tu pedido hoy mismo.",
       buttonText: "Ver productos",
-      buttonLink: "/productos.html"
+      buttonLink: "./productos.html"
     };
   };
   
