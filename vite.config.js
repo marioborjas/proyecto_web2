@@ -12,7 +12,8 @@ const getHtmlEntries = ()=>{
             ...glob.sync('./**/*.html', { ignore:['./dist/**','./node_modules/**']}).map(file=>[
                 file.slice(0, file.length - path.extname(file).length),
                 resolve(__dirname, file)
-            ])
+            ]),
+            ["404", resolve(__dirname, "404.html")]
         ]
     )
 }
@@ -20,7 +21,7 @@ const getHtmlEntries = ()=>{
 export default defineConfig(
     {
         appType: 'mpa',
-        base: "./",
+        base: "/proyecto_web2",
         build: {
             rollupOptions: {
                 input: getHtmlEntries()
