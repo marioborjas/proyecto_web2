@@ -106,3 +106,40 @@
     }
   }
 }
+
+// Ajustes de responsividad
+
+@media (max-width: @breakResolutions[tablet]) {
+  .productos__contenedor {
+    padding: 0 10px;
+  }
+
+  .productos__titulo {
+    font-size: 2.5rem; /* Reducir tamaño del título en tabletas */
+    margin-bottom: 20px;
+  }
+
+  .producto__tarjeta {
+    flex: 1 1 calc(50% - 20px); /* Mostrar 2 tarjetas por fila */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: @breakResolutions[mobile]) {
+  .productos__titulo {
+    font-size: 2rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .producto__tarjeta {
+    flex: 1 1 calc(100% - 20px); /* Mostrar 1 tarjeta por fila */
+    max-width: 100%;
+  }
+
+  .producto__imagen-container {
+    height: 150px; /* Reducir la altura de las imágenes en móviles */
+  }
+
+  .producto__boton {
+    font-size: 0.9rem; /* Reducir el tamaño del botón */
+  }
+}
