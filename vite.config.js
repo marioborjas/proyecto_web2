@@ -13,7 +13,7 @@ const getHtmlEntries = ()=>{
                 file.slice(0, file.length - path.extname(file).length),
                 resolve(__dirname, file)
             ]),
-            ["404", resolve(__dirname, "404.html")]
+        
         ]
     )
 }
