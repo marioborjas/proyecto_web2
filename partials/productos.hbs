@@ -1,22 +1,30 @@
 <section class="productos">
-    <section class="productos__fondo">
-        <div class="productos__contenedor">
-            <h1 class="productos__titulo">Nuestros Productos</h1>
-            <div class="productos__tarjetas">
-                {{#each productos}}
-                <div class="producto__tarjeta">
-                    <div class="producto__imagen-container">
-                        <img src="{{this.imagen}}" alt="{{this.nombre}}" class="producto__imagen">
-                    </div>
-                    <div class="producto__detalles">
-                        <h2 class="producto__nombre">{{this.nombre}}</h2>
-                        <p class="producto__descripcion">{{this.descripcion}}</p>
-                        <p class="producto__precio">{{this.precio}}</p>
-                        <button class="producto__boton">Comprar</button>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
+  <section class="productos__fondo">
+    <div class="productos__contenedor">
+      <h1 class="productos__titulo">Nuestros Productos</h1>
+      <div class="productos__tarjetas">
+        {{#each productos}}
+        <div class="producto__tarjeta">
+          <div class="producto__imagen-container">
+            <img src="{{this.imagen}}" alt="{{this.nombre}}" class="producto__imagen">
+          </div>
+          <div class="producto__detalles">
+            <h2 class="producto__nombre">{{this.nombre}}</h2>
+            <p class="producto__descripcion">{{this.descripcion}}</p>
+            <p class="producto__precio"> {{this.precio}}</p>
+            <button class="producto__boton" onclick="agregarAlCarrito('{{this.nombre}}', '{{this.precio}}')">Comprar</button>
+          </div>
         </div>
-    </section>
+        {{/each}}
+      </div>
+    </div>
+  </section>
 </section>
+
+<script>
+  function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push({ nombre, precio });
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+  }
+</script>
