@@ -1,13 +1,13 @@
-@import "./main.less";
+@import "./main.less"; 
 
 .productos {
-  padding: 5px 20px; 
+  padding: 5px 20px;
   background-color: @background-color;
 
   .productos__fondo {
     max-width: 2000px;
-    margin: 0 auto; 
-    padding: 0 20px; 
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   .productos__contenedor {
@@ -17,9 +17,9 @@
     text-align: center;
 
     .productos__titulo {
-      font-size: 3rem; 
+      font-size: 3rem;
       color: @primary-color;
-      margin-bottom: 30px; 
+      margin-bottom: 30px;
       text-align: center;
     }
 
@@ -28,11 +28,11 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      padding: 20px; 
+      padding: 20px;
     }
 
     .producto__tarjeta {
-      flex: 1 1 calc(25% - 20px);
+      flex: 1 1 calc(25% - 20px); // 4 tarjetas por fila en pantallas grandes
       box-sizing: border-box;
       max-width: calc(25% - 20px);
       background: linear-gradient(135deg, @color-background, @secondary-color);
@@ -104,42 +104,5 @@
         }
       }
     }
-  }
-}
-
-// Ajustes de responsividad
-
-@media (max-width: @breakResolutions[tablet]) {
-  .productos__contenedor {
-    padding: 0 10px;
-  }
-
-  .productos__titulo {
-    font-size: 2.5rem; /* Reducir tamaño del título en tabletas */
-    margin-bottom: 20px;
-  }
-
-  .producto__tarjeta {
-    flex: 1 1 calc(50% - 20px); /* Mostrar 2 tarjetas por fila */
-    max-width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: @breakResolutions[mobile]) {
-  .productos__titulo {
-    font-size: 2rem; /* Reducir aún más el tamaño del título */
-  }
-
-  .producto__tarjeta {
-    flex: 1 1 calc(100% - 20px); /* Mostrar 1 tarjeta por fila */
-    max-width: 100%;
-  }
-
-  .producto__imagen-container {
-    height: 150px; /* Reducir la altura de las imágenes en móviles */
-  }
-
-  .producto__boton {
-    font-size: 0.9rem; /* Reducir el tamaño del botón */
   }
 }
