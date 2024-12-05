@@ -1,0 +1,14 @@
+repositorio de git
+https://github.com/marioborjas/proyecto_web2.git
+
+github pages
+https://marioborjas.github.io/proyecto_web2/
+
+integrantes 
+Mario Isaac Borjas Enamorado        0801200321935   git: marioborjas
+Helder Isaac Ramos Aguilar          0801200402460   git: HelderRamos20
+Jonny Alexis Girón Gutiérrez        0824200000565   git: Jgutybrz
+Elmer Eduardo Hernández Suárez      0401200400439   git: MemeH27
+Wiliams Reniery Zambrano Martinez   0613200000081   git: Williams1904
+Dany María posadas canales          1709200001230   git: Dany239
+Enoc Asael García Mata              0801200501734   git: Enoc2077
